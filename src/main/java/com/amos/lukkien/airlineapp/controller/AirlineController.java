@@ -2,6 +2,7 @@ package com.amos.lukkien.airlineapp.controller;
 
 import com.amos.lukkien.airlineapp.dao.AirportRepository;
 import com.amos.lukkien.airlineapp.model.Airport;
+import com.amos.lukkien.airlineapp.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.data.domain.Example;
@@ -14,21 +15,18 @@ import java.util.List;
 @RestController
 public class AirlineController {
     @Autowired
+    private BookingService bookingService;
+    @Autowired
     private AirportRepository airportRepository;
+
     @GetMapping("/airports")
-    public List<Airport> getAllAirport() {
+    public List<Airport> getAllAirports() {
         return airportRepository.findAll();
     }
 
-    @GetMapping("/airports/{name}")
-    public List<Airport> getAirportByName(@PathVariable String name) {
-
-        Airport airport = new Airport();
-        airport.setName(name);
-        Example<Airport> example = Example.of(airport);
-        List<Airport> results = airportRepository.findAll(example);
-
-        return results;
+    @GetMapping("/airports/{nameOrCode}")
+    public List<Airport> getAirportsByNameOrCode(@PathVariable String nameOrCode) {
+        return bookingService.findAirportsByCodeOrName(nameOrCode);
     }
 
 }
