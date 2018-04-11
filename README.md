@@ -28,6 +28,11 @@ http://localhost:9000/swagger-ui.html
 ## H2 Console
 http://localhost:9000/h2-console/
 
+Driver class: org.h2.Driver
+JDBC URL: jdbc:h2:mem:testdb
+User Name: sa
+Password should be left empty
+
 
 
 
@@ -43,3 +48,4 @@ paramaters passengerName is a freely determined String and price is a free deter
 
 ### Generate report of Bookings
 
+There can reports be generated for all the bookings for a given Destination or Departure. For this we use the URL /report/departureId/{departureId}   or /report/destinationId/{destinationId} where we subtitute the id for valid values. a list of Bookings is returned.
