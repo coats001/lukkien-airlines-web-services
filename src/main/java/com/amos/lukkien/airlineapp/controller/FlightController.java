@@ -36,7 +36,7 @@ public class FlightController {
     @GetMapping("/flight/departure/nameOrCode/{nameOrCode}")
     public List<Flight> findFlightByDepartureNameOrCode(@PathVariable String nameOrCode) {
 
-        return flightService.findFlightByDestinationNameOrCode(nameOrCode);
+        return flightService.findFlightByDepartureNameOrCode(nameOrCode);
     }
 }
 
