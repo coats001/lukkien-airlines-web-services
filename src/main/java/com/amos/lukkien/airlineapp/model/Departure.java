@@ -30,7 +30,13 @@ public class Departure {
     public Airport getAirport() {
         return airport;
     }
+    public int getId() {
+        return id;
+    }
 
+    public Flight getFlight() {
+        return flight;
+    }
     @Override
     public String toString() {
         return "Departure{" +
@@ -39,4 +45,6 @@ public class Departure {
                 ", airport=" + airport +
                 '}';
     }
+
+
 }

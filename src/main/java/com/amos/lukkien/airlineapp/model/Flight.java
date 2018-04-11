@@ -1,6 +1,7 @@
 package com.amos.lukkien.airlineapp.model;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -9,7 +10,7 @@ public class Flight {
     public Flight() {
     }
 
-    public Flight(AirplaneCompany airplaneCompany, Departure departure, Destination destination, List<Booking> bookings) {
+    public Flight(AirplaneCompany airplaneCompany, Departure departure, Destination destination, List<Booking> bookings, Date flightDate) {
         this.airplaneCompany = airplaneCompany;
         this.departure = departure;
         this.destination = destination;
@@ -21,14 +22,13 @@ public class Flight {
     protected int id;
     @ManyToOne
     protected AirplaneCompany airplaneCompany;
-    @OneToOne
+    @ManyToOne
     protected Departure departure;
-    @OneToOne
+    @ManyToOne
     protected Destination destination;
-    // here we use List not set since
-    //same flight can be booked multiple times
     @OneToMany
     protected List<Booking> bookings;
+
 
     public int getId() {
         return id;

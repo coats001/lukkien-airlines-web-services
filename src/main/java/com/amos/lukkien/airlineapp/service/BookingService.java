@@ -5,11 +5,17 @@ import com.amos.lukkien.airlineapp.model.Booking;
 import com.amos.lukkien.airlineapp.model.Flight;
 import com.amos.lukkien.airlineapp.model.Passenger;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 public interface BookingService {
-
-    public Booking bookFlight(Flight flight, Passenger passenger);
+    /**
+     * Saves a booking into the system
+     * @param booking
+     * @return The booked flight
+     */
+    public Booking bookFlight(Booking booking);
 
 
 }

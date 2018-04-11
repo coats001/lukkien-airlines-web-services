@@ -14,4 +14,27 @@ public class Destination {
 
     @ManyToOne
     protected Airport airport;
+
+    public Destination() {
+    }
+
+    public Destination(Airport airport) {
+        this.airport = airport;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Airport getAirport() {
+        return airport;
+    }
+
+    @Override
+    public String toString() {
+        return "Destination{" +
+                "id=" + id +
+                ", airport=" + airport +
+                '}';
+    }
 }

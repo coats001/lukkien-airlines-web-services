@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
-public interface AirportRepository extends JpaRepository<Airport,Long> {
+public interface AirportRepository extends JpaRepository<Airport,Integer> {
 
     List<Airport> findByNameIgnoreCaseContaining(String name);
     List<Airport> findByCodeIgnoreCaseContaining(String code);
