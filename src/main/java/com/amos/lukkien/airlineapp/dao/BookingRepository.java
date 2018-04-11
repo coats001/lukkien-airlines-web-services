@@ -13,7 +13,7 @@ import java.util.Optional;
 @Component
 public interface BookingRepository extends JpaRepository<Booking,Integer> {
     @Query("SELECT b FROM Booking b where b.flight.departure.id = :id")
-    Optional<Booking> findAllBookingsByDepartureId(@Param("id") int id);
+    List<Booking> findAllBookingsByDepartureId(@Param("id") int id);
     @Query("SELECT b FROM Booking b where b.flight.destination.id = :id")
-    Optional<Booking> findAllBookingsByDestinationId(@Param("id") int id);
+    List<Booking> findAllBookingsByDestinationId(@Param("id") int id);
 }

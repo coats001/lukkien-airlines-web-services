@@ -18,14 +18,11 @@ public class ReportServiceImpl implements ReportService{
 
     @Override
     public List<Booking> findAllBookingsByDeparture(Integer departureId){
-       Optional<Booking> optionalBookings = bookingRepository.findAllBookingsByDepartureId(departureId);
-        return optionalBookings.stream().collect(Collectors.toList());
-
+       return bookingRepository.findAllBookingsByDepartureId(departureId);
 
     }
     @Override
     public List<Booking> findAllBookingsByDestination(Integer destinationId){
-        Optional<Booking> optionalBookings =   bookingRepository.findAllBookingsByDestinationId(destinationId);
-        return optionalBookings.stream().collect(Collectors.toList());
+        return bookingRepository.findAllBookingsByDestinationId(destinationId);
     }
 }
