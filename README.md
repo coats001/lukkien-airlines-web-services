@@ -48,4 +48,4 @@ paramaters passengerName is a freely determined String and price is a free deter
 
 ### Generate report of Bookings
 
-There can reports be generated for all the bookings for a given Destination or Departure. For this we use the URL /report/departureId/{departureId}   or /report/destinationId/{destinationId} where we subtitute the id for valid values. a list of Bookings is returned.
+There can reports be generated for all the bookings for a given Destination or Departure. For this we use the URL http://localhost:9000/report/departureId/{departureId}   or http://localhost:9000/report/destinationId/{destinationId} where we subtitute the id for valid values. a list of Bookings is returned.
