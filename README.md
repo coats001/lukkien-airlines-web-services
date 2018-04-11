@@ -28,10 +28,10 @@ http://localhost:9000/swagger-ui.html
 ## H2 Console
 http://localhost:9000/h2-console/
 
-Driver class: org.h2.Driver
-JDBC URL: jdbc:h2:mem:testdb
-User Name: sa
-Password should be left empty
+* Driver class: org.h2.Driver
+* JDBC URL: jdbc:h2:mem:testdb
+* User Name: sa
+* Password should be left empty
 
 
 
