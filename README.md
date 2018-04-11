@@ -1,4 +1,7 @@
 
+
+
+
 # lukkien-airlines-web-services
 
 
@@ -49,3 +52,15 @@ paramaters passengerName is a freely determined String and price is a free deter
 ### Generate report of Bookings
 
 There can reports be generated for all the bookings for a given Destination or Departure. For this we use the URL http://localhost:9000/report/departureId/{departureId}   or http://localhost:9000/report/destinationId/{destinationId} where we subtitute the id for valid values. a list of Bookings is returned.
+
+
+## TODO 
+Some things I tried but did not complete because of time constraint
+
+* Spitting the variuos service in smaller (micro!) applications running on there own port and commucation with each other to complete the varous scenario. I succeeded in making and running these separate service but encoutered some problems after abstracting and packinging the model in a separate jar.
+* Java level 9 worked fine on Windows but when running Maven in Centos Java 9 was not picked up even after installing Java 9 with alternatives and setting JAVA_HOME and JRE_HOME in de profile. So I have to revert some specific Streaming code in Spring Data JPA to level 8.
+* No comments since the names of the components  (classes, methods, packages) are quite selfexplanitory.
+* No unit; these logic is extremely simple. Testing was done on a higher level using Postman.
+
+
+
