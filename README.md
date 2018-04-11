@@ -17,6 +17,7 @@
 * Run the appication   **./restful-web-services-0.0.1-SNAPSHOT.jar**
 * Application is now available at http://localhost:9000/  (If there was a port conflict the port can be changed in application.porperties)
 * A basic set of initial data is loaded from the file **data.sql**. Use the H2 Console to inspect the contect of the database.
+* At restart it may happen that the port is in use. See here how to resolve that by killing the proces: https://stackoverflow.com/questions/11583562/how-to-kill-a-process-running-on-particular-port-in-linux
 
 
 
